@@ -15,12 +15,24 @@ def selection_sort(arr):
     return arr
 
 
-# TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-    # Your code here
+    # Keep looping while elements have been swapped
+    swapped_elements = True
+    while swapped_elements:
 
+        # Reset swapped elements
+        swapped_elements = False
+
+        for i in range(0, len(arr) - 1):
+
+            # Is this pair of elements sorted?
+            if arr[i] > arr[i+1]:
+                # swap the elements, note that elements have been swapped
+                arr[i], arr[i+1] = arr[i+1], arr[i]
+                swapped_elements = True
 
     return arr
+
 
 '''
 STRETCH: implement the Counting Sort function below
@@ -39,8 +51,9 @@ buckets.
 
 What is the time and space complexity of the counting sort algorithm?
 '''
+
+
 def counting_sort(arr, maximum=None):
     # Your code here
-
 
     return arr
